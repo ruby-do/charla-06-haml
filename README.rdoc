@@ -1,0 +1,2 @@
+== ruby.do
+Ejemplos de la charla "Hacking HAML" del 16 de Mayo, 2013 en Pulso Colectivo

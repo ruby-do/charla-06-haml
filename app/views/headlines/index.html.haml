@@ -1,0 +1,18 @@
+%h1{:style => "padding-bottom:20px;"} Sport headlines
+%table
+  :javascript
+    console.log("Testing inline JS ;)");
+  %tr
+    %th Title
+    %th Content
+  - @headlines.each do |headline|
+    %tr{:data => "#{headline.id}"}
+      <td style="padding: 30px; width:200px;"}>#{headline.title}
+      %td{:style => "padding: 30px; width:500px;"}= headline.content
+      %td{:style => "width: 60px;"}
+        = link_to 'Show ', headline
+      %td{:style => "width: 60px;"}
+        = link_to 'Edit ', edit_headline_path(headline)
+      %td{:style => "width: 60px;"}= link_to 'Destroy', headline, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Headline', new_headline_path, :class => "btn btn-info", :style => "float:right;"

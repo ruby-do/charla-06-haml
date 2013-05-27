@@ -1,0 +1,9 @@
+%p#notice= notice
+%p
+  %b Title:
+  = @headline.title
+%p
+  %b Content:
+  = @headline.content
+= link_to 'Back', headlines_path, :class => "btn btn-inverse"
+= link_to 'Edit', edit_headline_path(@headline), :class => "btn btn-warning"
